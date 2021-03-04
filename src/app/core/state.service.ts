@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class StateService {
   isLoggedIn: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public setLogin(value: boolean) {
     localStorage.setItem('Auth', value + '');
@@ -15,9 +16,10 @@ export class StateService {
 
   public resetLoginFromSession() {
     const login = localStorage.getItem('Auth');
-    if (login && login === 'true') { 
+    if (login && login === 'true') {
       this.isLoggedIn = true;
     } else {
+      this.router.navigate(['/login']);
       this.isLoggedIn = false;
     }
   }

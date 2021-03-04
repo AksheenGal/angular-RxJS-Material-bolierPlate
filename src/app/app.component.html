@@ -1,7 +1,7 @@
 <app-app-header *ngIf="loginService.isLogin()"></app-app-header>
 <mat-drawer-container class="example-container">
     <mat-drawer *ngIf="loginService.isLogin()" mode="side" opened>
-
+        <app-left-nav></app-left-nav>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>

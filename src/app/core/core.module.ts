@@ -4,11 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LeftNavComponent } from './left-nav/left-nav.component';
 
 @NgModule({
     imports: [MatFormFieldModule,MatInputModule,FormsModule, ReactiveFormsModule],
-    exports: [AppHeaderComponent],
+    exports: [AppHeaderComponent, LeftNavComponent],
     entryComponents: [],
-    declarations: [AppHeaderComponent, LoginComponent]
+    declarations: [AppHeaderComponent, LoginComponent, LeftNavComponent]
 })
 export class CoreModule { }

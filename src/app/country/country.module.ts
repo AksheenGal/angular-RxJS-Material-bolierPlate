@@ -1,9 +1,11 @@
 import { NgModule } from "@angular/core";
+import { CountryListComponent } from './country-list/country-list.component';
+import { CountryRoutingModule } from "./country-routing/country-routing.module";
 
 @NgModule({
-    imports: [],
+    imports: [CountryRoutingModule],
     exports: [],
     entryComponents: [],
-    declarations: []
+    declarations: [CountryListComponent]
 })
 export class CountryModule { }

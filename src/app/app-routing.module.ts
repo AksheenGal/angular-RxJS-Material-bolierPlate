@@ -5,7 +5,7 @@ import { LoginComponent } from './core/login/login.component';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: './country/country.module#CountryModule'
+    loadChildren: () => import('./country/country.module').then(m => m.CountryModule)
   },
   {
     path: 'login',

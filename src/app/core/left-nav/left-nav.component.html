@@ -1,1 +1,19 @@
-<p>left-nav works!</p>
+<div class="left-nav-div">
+    <div class="mainContaint">
+      <div *ngFor="let leftNav of leftNavData; let i = index">
+        <button class="buttonsOfLeftNav" [ngClass]="{'textColorAfterSelect': !hideMe[i], 'subChild': !hideSubMenu[i]}"
+          (click)="routeOrShowSubMenu(leftNav, i)" mat-menu-item>
+          <mat-icon>{{ leftNav.icon }}</mat-icon>
+          <span>{{ leftNav.name }}</span>
+        </button>
+        <div [ngClass]="{'selected': !hideMe[i]}"></div>
+        <div class="activeLink"></div>
+        <!-- <div class="subChild paddingLeft" [hidden]="hideSubMenu[i]" *ngFor="let child of leftNav.child">
+          <button mat-menu-item>
+            <span>{{ child.name }}</span>
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  

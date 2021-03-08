@@ -1,0 +1,12 @@
+<form (submit)="submit()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Country Name</mat-label>
+      <input [(ngModel)]="countryInput" name="countryInput" matInput placeholder="Enter country name">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Get data</button>
+  </form>
+ 
+<div *ngIf="countryData">
+    <div>name - <span>{{countryData.name}}</span></div>
+    <div>population - <span>{{countryData.population}}</span></div>
+</div>

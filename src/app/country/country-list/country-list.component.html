@@ -1,1 +1,5 @@
-<p>country-list works!</p>
+<div class="flexWrapper">
+    <div class="flexAdjust" *ngFor="let country of listOfCountries; let i = index">
+        {{i + 1}} . {{country}}
+    </div>
+</div>

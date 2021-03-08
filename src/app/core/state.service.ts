@@ -6,16 +6,21 @@ import { Router } from '@angular/router';
 })
 export class StateService {
   isLoggedIn: boolean = false;
+  headerTitle: string = '';
+  componentTitle: string = 'All Conutries';
 
   constructor(private router: Router) { }
 
   public setLogin(value: boolean) {
-    localStorage.setItem('Auth', value + '');
     this.isLoggedIn = value;
+    sessionStorage.setItem('Auth', value + '');
+    if (value == false) { 
+      this.router.navigate(['/login']);
+    }
   }
 
   public resetLoginFromSession() {
-    const login = localStorage.getItem('Auth');
+    const login = sessionStorage.getItem('Auth');
     if (login && login === 'true') {
       this.isLoggedIn = true;
     } else {

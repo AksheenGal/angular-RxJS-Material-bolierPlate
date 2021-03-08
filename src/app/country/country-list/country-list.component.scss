@@ -1,0 +1,10 @@
+.flexAdjust {
+     flex: 1 0 20%;
+}
+
+.flexWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    text-align: left;
+}

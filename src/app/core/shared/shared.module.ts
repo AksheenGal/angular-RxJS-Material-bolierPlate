@@ -9,7 +9,7 @@ import { MaterialModule } from '../material/material.module';
     CommonModule,
     FormsModule,
     // BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
     // AppRoutingModule
   ],
   exports: [

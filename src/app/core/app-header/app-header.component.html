@@ -1,21 +1,16 @@
-<p>app-header works!</p>
-absafbba    oubdobfobb
-afvo
-
-<button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
+<div style="text-align: right; border-bottom: 1px solid;">
+  <div class="alignTitle">{{state.headerTitle}}</div>
+  <button [matMenuTriggerFor]="menu" class="noBorder" aria-label="Example icon-button with a menu">
+    <img src="./../../../assets/user/2x/baseline_supervised_user_circle_black_18dp.png" />
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
+      <mat-icon>announcement</mat-icon>
+      <span>Hello</span>
     </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
+    <button (click)="signOut()" mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Log out</span>
     </button>
   </mat-menu>
+</div>

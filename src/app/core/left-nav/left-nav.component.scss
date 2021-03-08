@@ -1,0 +1,55 @@
+.selected {}
+
+button {
+  font-size: 14px;
+}
+
+.textColorAfterSelect {
+    background-color: #1890ff;
+}
+
+.iconDiv {
+  display: inline-block;
+  width: 25%;
+  background-color: white
+}
+
+.left-nav-div {
+  display: flex;
+  height: 100%;
+}
+
+.buttonsOfLeftNav {
+  height: 40px;
+}
+
+.mainContaint {
+  display: inline-block;
+  width: 100%;
+  background-color: #001529;
+}
+
+.paddingLeft {
+  padding-left: 20px;
+}
+
+.test {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.subChild {
+  background-color: #f4f5f9;
+}
+
+.centerIcon {
+  margin: 11px auto;
+  font-size: 22px;
+}
+
+.mat-menu-item:hover:not([disabled]) {
+    background: none;
+    font-weight: bold;
+}

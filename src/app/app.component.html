@@ -4,9 +4,15 @@
         <app-left-nav></app-left-nav>
     </mat-drawer>
     <mat-drawer-content>
-        <div style="text-align: center; font-weight: bold;">{{state.componentTitle}}</div>
+        <div *ngIf="loginService.isLogin()" style="text-align: center; font-weight: bold;">{{state.componentTitle}}</div>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
 
-<mat-spinner class="spinner" *ngIf="appService.showSpinner" style="margin:0 auto;"></mat-spinner>
+<mat-spinner class="spinner" color="accent" *ngIf="true" style="margin:0 auto;"></mat-spinner>
+
+<mat-progress-spinner class="spinner" 
+                        mode="indeterminate" 
+                        *ngIf="true" 
+                        diameter="40">
+  </mat-progress-spinner>

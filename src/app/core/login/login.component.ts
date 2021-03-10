@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   submit() {
     this.state.setLogin(true);
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home/all'])
   }
 
 }

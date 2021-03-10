@@ -8,7 +8,7 @@ import { CountryChartComponent } from '../country-chart/country-chart.component'
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'all',
     component: CountryListComponent
   },
   {

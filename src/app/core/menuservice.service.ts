@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MenuService {
   menus: MenuItem[] = [
-    new MenuItem('All countries', 'home', '/home'),
+    new MenuItem('All countries', 'home', '/home/all'),
     new MenuItem('Search country', 'search', '/home/searchCountry'),
     new MenuItem('Country Charts', 'stacked_bar_chart', '/home/charts')
   ]

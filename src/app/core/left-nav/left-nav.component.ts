@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuService } from '../menuservice.service';
 import { StateService } from '../state.service';
 
@@ -18,22 +18,32 @@ export class LeftNavComponent implements OnInit {
     public router: Router) { }
 
   ngOnInit(): void {
-    this.setFirstTab();
+    this.setReqTab();
     this.leftNavData = this.menuService.getMyMenuItems();
     if (this.leftNavData != undefined) {
       this.leftNavData = this.filterLeftNavData(this.leftNavData);
     }
   }
 
-  setFirstTab() {
+  setReqTab() {
+    const fullUrl = window.location.href;
     let test = this.menuService.getMyMenuItems();
     test = this.filterLeftNavData(test);
-    for (let i = 1; i < test.length; i++) {
-      this.hideMe[i] = true;
-      this.hideSubMenu[i] = true;
+    for (let i = 0; i < test.length; i++) {
+      if (fullUrl.includes(test[i].route)) {
+        this.hideSubMenu[i] = true;
+        this.hideMe[i] = false;
+      } else {
+        if (i == 0 && fullUrl.includes("login")) {
+          this.hideSubMenu[i] = true;
+        this.hideMe[i] = false;
+        } else {
+          this.hideMe[i] = true;
+          this.hideSubMenu[i] = true;  
+        }
+      }
     }
-    this.hideSubMenu[0] = true;
-    this.hideMe[0] = false;
+
   }
 
   filterLeftNavData(allLeftNavData) {

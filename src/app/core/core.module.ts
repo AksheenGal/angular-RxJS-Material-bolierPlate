@@ -8,9 +8,10 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
 import { SharedModule } from "./shared/shared.module";
 import { HttpClientModule } from "@angular/common/http";
 import { AlertComponentComponent } from './common/alert-component/alert-component.component';
+import { ChartsModule } from "ng2-charts";
 
 @NgModule({
-    imports: [MatFormFieldModule,MatInputModule,FormsModule, ReactiveFormsModule,SharedModule, HttpClientModule],
+    imports: [MatFormFieldModule,MatInputModule,FormsModule, ReactiveFormsModule,SharedModule, HttpClientModule, ChartsModule],
     exports: [AppHeaderComponent, LeftNavComponent],
     entryComponents: [AlertComponentComponent],
     declarations: [AppHeaderComponent, LoginComponent, LeftNavComponent, AlertComponentComponent]

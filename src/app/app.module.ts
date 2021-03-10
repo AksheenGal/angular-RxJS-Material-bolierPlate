@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

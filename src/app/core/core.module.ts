@@ -7,11 +7,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { SharedModule } from "./shared/shared.module";
 import { HttpClientModule } from "@angular/common/http";
+import { AlertComponentComponent } from './common/alert-component/alert-component.component';
 
 @NgModule({
     imports: [MatFormFieldModule,MatInputModule,FormsModule, ReactiveFormsModule,SharedModule, HttpClientModule],
     exports: [AppHeaderComponent, LeftNavComponent],
-    entryComponents: [],
-    declarations: [AppHeaderComponent, LoginComponent, LeftNavComponent]
+    entryComponents: [AlertComponentComponent],
+    declarations: [AppHeaderComponent, LoginComponent, LeftNavComponent, AlertComponentComponent]
 })
 export class CoreModule { }

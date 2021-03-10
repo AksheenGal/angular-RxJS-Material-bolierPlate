@@ -2,3 +2,10 @@
     margin: 10px !important;
  }
  
+ .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+}
+
+::ng-deep .mat-form-field-label{
+    color:#000 !important;
+}

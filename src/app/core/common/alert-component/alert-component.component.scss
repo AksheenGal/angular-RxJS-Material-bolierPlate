@@ -1,0 +1,52 @@
+.header {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    margin: -24px;
+    display: block;
+  }
+  
+  .headerClose {
+    top: -30px;
+    color: white;
+    text-align: center;
+    float: right;
+  }
+  
+  .text {
+    margin-top: 40px;
+  }
+  
+  .marginAround {
+    margin: 10px;
+    width: 46%;
+  }
+  
+  .siteDropDown {
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #0048a5;
+    padding: 0;
+    margin: 15px 0;
+    color: white;
+  }
+  
+  .marginAround.leftMargin0 {
+    margin-left: 0;
+  }
+  
+  p {
+    margin: 0em;
+    text-align: center;
+  }
+  
+  .mat-radio-button {
+    color: #757575;
+  }
+
+  .mat-dialog-container {
+      background-color: white !important;
+      color: black !important;
+  }

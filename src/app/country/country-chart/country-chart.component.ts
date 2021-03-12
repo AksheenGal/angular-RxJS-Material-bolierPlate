@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip, SingleDataSet } from 'ng2-charts';
 import { forkJoin } from 'rxjs';
+import { StateService } from 'src/app/core/state.service';
 import { CountryService } from '../country-service.service';
 
 @Component({
@@ -29,12 +30,13 @@ export class CountryChartComponent implements OnInit {
   public pieChartLegend = true;
   public pieChartPlugins = [];
 
-  constructor(private countryService: CountryService) {
+  constructor(private countryService: CountryService, private state: StateService) {
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
    }
 
   ngOnInit(): void {
+    this.state.componentTitle = "Country by charts";
     this.countryService.getCountryDataForChart().subscribe(res => {
       const dataArray = res.map(elem => elem[0].population);
       this.barChartData = [{
